@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "Commissar's Digest",
+    "slug": "commissars-digest",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#121212"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.commissarsdigest.app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#121212"
+      },
+      "package": "com.commissarsdigest.app"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "apifyApiToken": "apify_api_O2PnElsrhQfdRDzqDnuy4cdy7YUhnF4kJ5Kz",
+      "eas": {
+        "projectId": "commissars-digest"
+      }
+    }
+  }
+}
