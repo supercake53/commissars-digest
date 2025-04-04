@@ -1,18 +1,12 @@
 {
   "version": 2,
-  "buildCommand": "expo export:web",
-  "outputDirectory": "web-build",
-  "installCommand": "npm install --legacy-peer-deps",
-  "framework": "other",
+  "framework": "create-react-app",
   "builds": [
     {
       "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "web-build",
-        "nodeVersion": "18.x",
-        "installCommand": "npm install --legacy-peer-deps",
-        "buildCommand": "npm run build"
+        "distDir": "web-build"
       }
     }
   ],
