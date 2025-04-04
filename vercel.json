@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "npx expo export -p web",
+  "buildCommand": "expo export:web",
   "outputDirectory": "web-build",
   "installCommand": "npm install --legacy-peer-deps",
   "framework": "other",
@@ -11,7 +11,8 @@
       "config": {
         "distDir": "web-build",
         "nodeVersion": "18.x",
-        "installCommand": "npm install --legacy-peer-deps"
+        "installCommand": "npm install --legacy-peer-deps",
+        "buildCommand": "npm run build"
       }
     }
   ],
