@@ -1,5 +1,8 @@
 import { generateOptimizedPrompt } from './promptGeneration';
 
+// Hardcoded API key for development - replace with your actual key
+const STABILITY_API_KEY = 'sk-Ysxe7lVtoIIVbtIjQoa2yGSSOUF1nH8BfegAUJxg8RYh0tpr';
+
 export async function generateImage(description: string, year: number): Promise<string> {
   try {
     console.log('Generating image for:', { description, year });
@@ -7,11 +10,17 @@ export async function generateImage(description: string, year: number): Promise<
     const { prompt, negative_prompt } = generateOptimizedPrompt(description, year);
     console.log('Generated prompt:', { prompt, negative_prompt });
 
+    // Use hardcoded key for development, fallback to environment variables
+    const apiKey = process.env.STABILITY_API_KEY || STABILITY_API_KEY;
+    if (!apiKey) {
+      throw new Error('STABILITY_API_KEY is not available');
+    }
+
     const response = await fetch('https://api.stability.ai/v1/generation/stable-diffusion-xl-1024-v1-0/text-to-image', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${process.env.STABILITY_API_KEY}`,
+        'Authorization': `Bearer ${apiKey}`,
         'Accept': 'application/json',
       },
       body: JSON.stringify({
