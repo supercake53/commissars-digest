@@ -6,12 +6,14 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web",
+    "web": "expo start --web --host localhost --port 19006",
     "build": "npx expo export -p web",
     "vercel-build": "npx expo export -p web"
   },
   "dependencies": {
     "@expo-google-fonts/roboto-condensed": "^0.2.3",
+    "@expo/metro-config": "~0.7.1",
+    "@expo/metro-runtime": "~1.0.0",
     "@expo/webpack-config": "^18.0.1",
     "@react-navigation/native": "^6.1.9",
     "@react-navigation/native-stack": "^6.9.17",
@@ -21,13 +23,11 @@
     "expo-splash-screen": "~0.18.2",
     "expo-status-bar": "~1.4.4",
     "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-native": "0.71.8",
+    "react-dom": "^18.2.0",
+    "react-native": "0.71.14",
     "react-native-safe-area-context": "4.5.0",
     "react-native-screens": "~3.20.0",
-    "react-native-web": "~0.18.10",
-    "@expo/metro-config": "~0.7.1",
-    "@expo/metro-runtime": "~1.0.0"
+    "react-native-web": "^0.18.12"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
