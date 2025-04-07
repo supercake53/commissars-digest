@@ -49,7 +49,23 @@ npm run android
 
 ### Prerequisites
 1. Create a DigitalOcean account
-2. Install the DigitalOcean CLI (doctl)
+2. Install the DigitalOcean CLI (doctl):
+   
+   **Windows Installation:**
+   ```powershell
+   # Using Scoop (recommended)
+   scoop install doctl
+
+   # OR using Chocolatey
+   choco install doctl
+
+   # OR Manual Installation:
+   # 1. Download the latest release from:
+   # https://github.com/digitalocean/doctl/releases
+   # 2. Extract the ZIP file
+   # 3. Add the extracted folder to your PATH
+   ```
+
 3. Generate a DigitalOcean API token
 
 ### Step-by-Step Deployment Guide
@@ -68,11 +84,6 @@ npm run android
 
 3. **Configure Your App**
    ```bash
-   # Install doctl if not already installed
-   brew install doctl  # For macOS
-   # or
-   snap install doctl  # For Linux
-
    # Authenticate with your API token
    doctl auth init
 
