@@ -146,7 +146,7 @@ npm run android
 
 Create a `.env` file in the root directory with the following variables:
 ```
-NODE_ENV=development
+NODE_ENV=production
 API_URL=your_api_url
 ```
 
