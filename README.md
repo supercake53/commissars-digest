@@ -21,7 +21,7 @@ cd commissars-digest
 
 2. Install dependencies:
 ```bash
-npm install
+npm install --legacy-peer-deps
 ```
 
 3. Start the development server:
@@ -44,6 +44,7 @@ npm run android
 - `npm run android` - Start the Android version
 - `npm run build` - Build the web version
 - `npm run vercel-build` - Build for Vercel deployment
+- `npm run serve` - Serve the web version
 
 ## Deployment to DigitalOcean
 
@@ -101,7 +102,7 @@ npm run android
        repo: your-username/commissars-digest
        branch: main
      build_command: npm run build
-     run_command: npx serve web-build
+     run_command: npm run serve
      environment_slug: node-js
      instance_size_slug: basic-xxs
      instance_count: 1

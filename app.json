@@ -5,24 +5,10 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "userInterfaceStyle": "dark",
-    "assetBundlePatterns": [
-      "**/*"
-    ],
-    "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "com.commissarsdigest.app"
-    },
-    "android": {
-      "package": "com.commissarsdigest.app"
-    },
     "web": {
-      "bundler": "metro",
+      "bundler": "webpack",
+      "output": "single",
       "favicon": "./assets/favicon.png"
-    },
-    "extra": {
-      "eas": {
-        "projectId": "commissars-digest"
-      }
     }
   }
 }

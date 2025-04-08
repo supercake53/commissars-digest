@@ -1,0 +1,22 @@
+name: commissars-digest
+region: nyc
+services:
+  - name: web
+    git:
+      branch: main
+      repo_clone_url: https://github.com/yourusername/commissars-digest.git
+    build_command: npm install && npm run build
+    run_command: npm run serve
+    environment_slug: node-js
+    instance_size_slug: basic-xxs
+    instance_count: 1
+    routes:
+      - path: /
+    envs:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: "8080"
+    health_check:
+      http_path: /
+      port: 8080 
