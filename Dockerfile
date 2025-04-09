@@ -20,18 +20,19 @@ RUN rm -rf web-build
 RUN npm run build
 
 # Production stage
-FROM nginx:alpine
+FROM node:18-alpine
 
-# Copy the built web files from builder stage
-COPY --from=builder /app/web-build /usr/share/nginx/html
+WORKDIR /app
 
-# Copy our custom nginx config
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+# Copy package files
+COPY package*.json ./
 
-# Add healthcheck
-HEALTHCHECK --interval=30s --timeout=3s \
-    CMD wget --quiet --tries=1 --spider http://localhost:80/ || exit 1
+# Install only production dependencies
+RUN npm ci --only=production
 
-EXPOSE 80
+# Copy built files from builder stage
+COPY --from=builder /app/web-build ./web-build
 
-CMD ["nginx", "-g", "daemon off;"] 
+EXPOSE 8080
+
+CMD ["npm", "run", "serve"] 

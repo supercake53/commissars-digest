@@ -7,12 +7,18 @@ services:
       branch: main
       deploy_on_push: true
     build_command: npm run predeploy
-    run_command: nginx -g 'daemon off;'
-    health_check:
-      http_path: /
-    http_port: 80
+    run_command: npm run serve
+    http_port: 8080
     instance_count: 1
     instance_size_slug: basic-xxs
+    health_check:
+      http_path: /
+      port: 8080
+      initial_delay_seconds: 10
+      period_seconds: 5
+      timeout_seconds: 3
+      success_threshold: 1
+      failure_threshold: 3
     envs:
       - key: NODE_ENV
         value: production
