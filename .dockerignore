@@ -1,7 +1,8 @@
 node_modules
 .git
-.env
-.expo
 android
 ios
-*.log 
+*.log
+dist
+web-build
+.expo 
