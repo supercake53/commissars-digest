@@ -6,8 +6,16 @@ services:
     github:
       branch: main
       deploy_on_push: true
+    build_command: npm run predeploy
+    run_command: nginx -g 'daemon off;'
     health_check:
       http_path: /
     http_port: 80
     instance_count: 1
-    instance_size_slug: basic-xxs 
+    instance_size_slug: basic-xxs
+    envs:
+      - key: NODE_ENV
+        value: production
+      - key: STABILITY_API_KEY
+        scope: BUILD_TIME
+        value: ${STABILITY_API_KEY} 
