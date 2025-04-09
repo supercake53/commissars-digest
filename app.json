@@ -16,7 +16,7 @@
       "package": "com.commissarsdigest.app"
     },
     "web": {
-      "bundler": "metro",
+      "bundler": "webpack",
       "favicon": "./assets/favicon.png"
     },
     "plugins": [

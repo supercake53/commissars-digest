@@ -7,8 +7,8 @@
     "android": "expo run:android",
     "ios": "expo run:ios",
     "web": "expo start --web",
-    "build": "expo export:web",
-    "predeploy": "npm run build"
+    "build": "npx expo export:web",
+    "predeploy": "NODE_ENV=production npm run build"
   },
   "dependencies": {
     "@expo-google-fonts/roboto-condensed": "^0.2.3",
