@@ -9,7 +9,7 @@
     "web": "expo start --web",
     "build": "npx expo export:web",
     "predeploy": "NODE_ENV=production npm run build",
-    "serve": "npx serve web-build -s -l 8080"
+    "serve": "node server.js"
   },
   "dependencies": {
     "@expo-google-fonts/roboto-condensed": "^0.2.3",
@@ -38,7 +38,7 @@
     "metro": "^0.76.0",
     "metro-resolver": "^0.76.0",
     "metro-config": "^0.76.0",
-    "serve": "^14.2.1"
+    "express": "^4.18.3"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

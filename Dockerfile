@@ -1,5 +1,4 @@
-# Build stage
-FROM node:18-alpine AS builder
+FROM node:18-alpine
 
 # Set working directory
 WORKDIR /app
@@ -13,25 +12,8 @@ RUN npm install
 # Copy project files
 COPY . .
 
-# Clean any existing build
-RUN rm -rf web-build
-
 # Build the app
 RUN npm run build
-
-# Production stage
-FROM node:18-alpine
-
-WORKDIR /app
-
-# Copy package files
-COPY package*.json ./
-
-# Install only production dependencies
-RUN npm install --omit=dev
-
-# Copy built files from builder stage
-COPY --from=builder /app/web-build ./web-build
 
 EXPOSE 8080
 
