@@ -16,7 +16,8 @@
       "package": "com.commissarsdigest.app"
     },
     "web": {
-      "bundler": "webpack"
+      "bundler": "metro",
+      "favicon": "./assets/favicon.png"
     },
     "plugins": [
       "expo-system-ui",
@@ -26,6 +27,7 @@
       "eas": {
         "projectId": "commissars-digest"
       }
-    }
+    },
+    "platforms": ["ios", "android", "web"]
   }
 }
