@@ -1,0 +1,13 @@
+name: commissars-digest
+services:
+  - name: web
+    dockerfile_path: Dockerfile
+    source_dir: .
+    github:
+      branch: main
+      deploy_on_push: true
+    health_check:
+      http_path: /
+    http_port: 80
+    instance_count: 1
+    instance_size_slug: basic-xxs 

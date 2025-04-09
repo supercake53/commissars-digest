@@ -18,6 +18,10 @@
     "web": {
       "bundler": "webpack"
     },
+    "plugins": [
+      "expo-system-ui",
+      "expo-font"
+    ],
     "extra": {
       "eas": {
         "projectId": "commissars-digest"
