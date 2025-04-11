@@ -149,10 +149,8 @@ export const HomeScreen = () => {
       padding: isSmallScreen ? 8 : 16,
     },
     header: {
-      backgroundColor: '#1A1A1A',
+      backgroundColor: '#6a0000',
       padding: isSmallScreen ? 16 : 24,
-      borderBottomWidth: 4,
-      borderBottomColor: '#FF0000',
       shadowColor: '#000',
       shadowOffset: { width: 0, height: 4 },
       shadowOpacity: 0.5,
@@ -184,7 +182,7 @@ export const HomeScreen = () => {
       zIndex: 2,
     },
     eventCard: {
-      backgroundColor: '#2A2A2A',
+      backgroundColor: '#000000',
       borderRadius: 8,
       marginBottom: isSmallScreen ? 24 : 32,
       overflow: 'hidden',
@@ -240,7 +238,7 @@ export const HomeScreen = () => {
       justifyContent: 'space-between',
       alignItems: 'center',
       padding: 16,
-      backgroundColor: '#2A2A2A',
+      backgroundColor: '#000000',
       borderBottomWidth: 1,
       borderBottomColor: '#3A3A3A',
     },
@@ -251,7 +249,7 @@ export const HomeScreen = () => {
       padding: 16,
       paddingTop: 12,
       fontWeight: '500',
-      backgroundColor: '#2A2A2A',
+      backgroundColor: '#000000',
     },
   });
 
@@ -425,7 +423,7 @@ export const HomeScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#000000',
+    backgroundColor: '#6a0000',
   },
   date: {
     fontSize: 20,
