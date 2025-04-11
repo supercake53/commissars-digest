@@ -4,7 +4,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #1A1A1A;
+  background: #6a0000;
   border-left: 2px solid #FF0000;
   border-right: 2px solid #FF0000;
 }
@@ -22,5 +22,5 @@
 /* Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #FFD700 #1A1A1A;
+  scrollbar-color: #FFD700 #6a0000;
 } 

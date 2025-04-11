@@ -6,6 +6,7 @@ export interface HistoricalEvent {
 }
 
 export type RootStackParamList = {
+  Splash: undefined;
   Home: undefined;
   Detail: { event: HistoricalEvent };
 }; 
